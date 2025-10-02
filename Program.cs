@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using DSA.LinkedList;
 
-new SingleLinkedListSolutionTest().Test();
+//new SingleLinkedListSolutionTest().Test();
+new DoubleLinkedListSolutionTest().Test();

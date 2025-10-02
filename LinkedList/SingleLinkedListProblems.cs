@@ -32,9 +32,12 @@ namespace DSA.LinkedList
             return head;
         }
 
-        public static SingleLinkedList<T> removeHead(SingleLinkedList<T> node)
+        public static SingleLinkedList<T>? removeHead(SingleLinkedList<T> node)
         {
+            if (node == null || node.Next == null) return null;
+            var prev = node;
             node = node.Next;
+            prev.Next = null;
             return node;
         }
 
@@ -106,7 +109,7 @@ namespace DSA.LinkedList
             return EqualityComparer<T>.Default.Equals(data,value);
         }
 
-        public static void printLL(SingleLinkedList<T> node)
+        public static void printLL(SingleLinkedList<T>? node)
         {
             Console.WriteLine("Linked list");
             while (node != null)

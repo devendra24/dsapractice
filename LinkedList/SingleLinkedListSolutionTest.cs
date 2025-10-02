@@ -20,11 +20,13 @@ namespace DSA.LinkedList
 
             Console.WriteLine("converintng array to LL");
             var node = SingleLinkedListProblems<int>.convertArraytolinkedList(values);
+            var curr = node;
             SingleLinkedListProblems<int>.printLL(node);
 
             Console.WriteLine("removing head LL");
             node = SingleLinkedListProblems<int>.removeHead(node);
             SingleLinkedListProblems<int>.printLL(node);
+            SingleLinkedListProblems<int>.printLL(curr);
 
             Console.WriteLine("removing tail LL");
             node = SingleLinkedListProblems<int>.removeTail(node);

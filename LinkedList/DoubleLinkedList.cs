@@ -6,11 +6,23 @@ using System.Threading.Tasks;
 
 namespace DSA.LinkedList
 {
-    internal class DoubleLinkedList<T>(T data)
+    internal class DoubleLinkedList<T>
     {
-        public T Data { get; } = data;
+        public T Data { get; }
 
         public DoubleLinkedList<T>? Prev { get; set; }
         public DoubleLinkedList<T>? Next { get; set; }
+
+        public DoubleLinkedList(T data)
+        {
+            Data = data;
+        }
+
+        public DoubleLinkedList(T data, DoubleLinkedList<T> prev, DoubleLinkedList<T> next)
+        {
+            Data = data;
+            Prev = prev;
+            Next = next;
+        }
     }
 }
