@@ -53,7 +53,7 @@ namespace DSA.LinkedList
             SingleLinkedListProblems<int>.printLL(node);
 
             Console.WriteLine("intserting to trail LL");
-            node = SingleLinkedListProblems<int>.insertValueTail(node, 4);
+            node = SingleLinkedListProblems<int>.insertValueTail(node, 11);
             SingleLinkedListProblems<int>.printLL(node);
 
             Console.WriteLine("intserting at kth 4th , 9 LL");
@@ -69,7 +69,15 @@ namespace DSA.LinkedList
             node = SingleLinkedListProblems<int>.insertBeforeValue(node, 7,11);
             SingleLinkedListProblems<int>.printLL(node);
 
-            
+
+            Console.WriteLine("Reverse LL");
+            node = SingleLinkedListProblems<int>.ReversLL(node);
+            SingleLinkedListProblems<int>.printLL(node);
+
+            Console.WriteLine("Reverse LL recurtion");
+            node = SingleLinkedListProblems<int>.ReversLLRecurtion(node);
+            SingleLinkedListProblems<int>.printLL(node);
+
         }
     }
 }

@@ -201,5 +201,38 @@ namespace DSA.LinkedList
 
             return newHead;
         }
+        internal static SingleLinkedList<T>? ReversLL(SingleLinkedList<T> head)
+        {
+           if(head == null || head.Next == null)
+            {
+                return head;
+            }
+            var curr = head;
+            SingleLinkedList<T>? prev = null;
+
+            while (curr != null) 
+            {
+                var temp = prev;
+                prev = curr;
+                curr = curr.Next;
+                prev.Next = temp;
+            }
+
+            return prev;
+        }
+        internal static SingleLinkedList<T>? ReversLLRecurtion(SingleLinkedList<T> head)
+        {
+           if(head == null || head.Next == null)
+            {
+                return head;
+            }
+
+            var newNode = ReversLLRecurtion(head.Next);
+
+            var front = head.Next;
+            front.Next = head;
+            head.Next = null;
+            return newNode;
+        }
     }
 }
